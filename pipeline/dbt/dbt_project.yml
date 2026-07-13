@@ -1,8 +1,8 @@
-name: demo_sales_etl
+name: snowflake_sales_aggregate_dbt
 version: 1.0.0
 config-version: 2
 
-profile: demo_sales_etl
+profile: snowflake_sales_aggregate_dbt
 
 model-paths: ["models"]
 analysis-paths: ["analyses"]
@@ -17,7 +17,7 @@ clean-targets:
   - "logs"
 
 models:
-  demo_sales_etl:
+  snowflake_sales_aggregate_dbt:
     marts:
       +materialized: table
-      +tags: ["demo_sales_etl"]
+      +tags: ["snowflake_sales_aggregate_dbt"]

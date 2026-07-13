@@ -1,12 +1,12 @@
-demo_sales_etl:
+snowflake_sales_aggregate_dbt:          # must match name in dbt_project.yml
   target: dev
   outputs:
     dev:
       type: snowflake
-      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
-      user: "{{ env_var('SNOWFLAKE_USER') }}"
-      password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
-      role: "{{ env_var('SNOWFLAKE_ROLE', 'ACCOUNTADMIN') }}"
-      database: "{{ env_var('SNOWFLAKE_DATABASE', 'DEMO_DB') }}"
-      warehouse: "{{ env_var('SNOWFLAKE_WAREHOUSE', 'COMPUTE_WH') }}"
-      schema: "{{ env_var('SNOWFLAKE_SCHEMA', 'DEMO_SCHEMA') }}"
+      account: "snowflake"
+      user: "snowflake"
+      password: "snowflake"
+      role: ACCOUNTADMIN
+      database: DEMO_DB
+      warehouse: COMPUTE_WH
+      schema: DEMO_SCHEMA
