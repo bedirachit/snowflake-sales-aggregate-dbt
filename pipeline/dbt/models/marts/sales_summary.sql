@@ -6,7 +6,7 @@
 
 select
     user_id,
-    sum(quantity) as total_quantity,
+    sum(qty) as total_qty,
     max(sale_date) as last_sale
 from {{ source('demo', 'raw_sales') }}
 group by user_id
